@@ -1,18 +1,19 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-const target = "https://auction-bidding-system-backend.vercel.app/api";
-
 export default defineConfig({
-	plugins: [react()],
-	server: {
-		proxy: {
-			"/api": {
-				target,
-				changeOrigin: true,
-				secure: true,
-				rewrite: (path) => path.replace(/^\/api/, ""),
-			},
-		},
-	},
+  plugins: [react()],
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://auction-bidding-system-backend.vercel.app/api",
+        changeOrigin: true,
+        secure: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
+  build: {
+    outDir: 'dist'
+  }
 });
