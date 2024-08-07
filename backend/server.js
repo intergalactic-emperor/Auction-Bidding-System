@@ -17,6 +17,7 @@ app.use(
 	})
 );
 app.use(router);
+app.get("/", (req, res) => res.send("Express on Vercel"));
 app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/auctions", require("./routes/auctionRoutes"));
 app.use("/api/bids", require("./routes/bidRoutes"));
