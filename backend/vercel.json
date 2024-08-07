@@ -1,10 +1,1 @@
-{
-   "version": 2,
-   "name": "Auction-Bidding-System",
-   "builds": [
-      { "src": "*.js", "use": "@vercel/node" }
-   ],
-   "routes": [
-      { "src": "/(.*)", "dest": "/*.js" }
-   ]
-}
+{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }] }
