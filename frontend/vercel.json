@@ -14,10 +14,5 @@
       "destination": "https://auction-bidding-system-backend.vercel.app/api/$1"
     }
   ],
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ]
+  "cleanUrls": true
 }
